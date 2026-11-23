@@ -1,19 +1,29 @@
-h1 {
-    color: rgb(200, 12, 90);
-    text-shadow: 5px 10px rgb(188, 226, 19);
+html,body{
+  padding:0;
+  margin:0;
 }
-
-a {
-    text-decoration: none;
+/**scrollのバーが邪魔になって画面がズレるので**/
+/**widthとheightは100vh、100vwで画面いっぱいにしておきます。**/
+.base{
+  display:flex;
+  flex-direction:row;
+  width:100vw;
+  height:100vh;
+  overflow:hidden;
 }
-
-li {
-    list-style-type: none;
+/**iframeを表示する領域。**/
+.hidari{
+ width:15%;
+ height:100%;
 }
-a:hover{
-    color:rgb(249,253,3);
-    text-decoration: underline;
-    background-color: rgb(138, 137, 137);
-    border-radius: 0.3em;
-    padding: 5px;
+/**iframe内のページの広さをiframeの幅に合わせる。**/
+/**これがないと縦だけでなく横方面にもスクロールバーが出てみっともないです。**/
+.menu{
+	width:100%;
+}
+/**右のメインになる画面です。**/
+.migi{
+ width:85%;
+ height:100%;
+ overflow-y:scroll;
 }
